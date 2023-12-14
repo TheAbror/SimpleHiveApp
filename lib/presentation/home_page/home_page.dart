@@ -84,8 +84,8 @@ class _HomePageState extends State<HomePage> {
                         Person person = boxPersons.getAt(index);
 
                         return ListTile(
-                          title: const Text('Name'),
-                          subtitle: Text(person.name),
+                          title: Text(person.name),
+                          subtitle: const Text('Name'),
                           trailing: Text('Age: ${person.age}'),
                           leading: IconButton(
                             onPressed: () {
