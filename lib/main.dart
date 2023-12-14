@@ -1,11 +1,13 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_hive/presentation/home_page/person.dart';
+import 'package:flutter_hive/presentation/home_page/model/boxes.dart';
+import 'package:flutter_hive/presentation/home_page/model/person.dart';
 import 'package:flutter_hive/presentation/widgets/textfield_decoration.dart';
 import 'package:hive_flutter/hive_flutter.dart';
 
 void main() async {
   await Hive.initFlutter();
   Hive.registerAdapter(PersonAdapter());
+  boxPersons = await Hive.openBox<Person>('personBox');
   runApp(const MainApp());
 }
 
