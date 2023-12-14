@@ -1,4 +1,4 @@
-name: hive
+name: flutter_hive
 description: A new Flutter project.
 publish_to: 'none'
 version: 0.1.0
@@ -9,11 +9,15 @@ environment:
 dependencies:
   flutter:
     sdk: flutter
+  hive: 
+  hive_flutter: 
 
 dev_dependencies:
   flutter_test:
     sdk: flutter
   flutter_lints: ^2.0.0
+  hive_generator: 
+  build_runner: 
 
 flutter:
   uses-material-design: true

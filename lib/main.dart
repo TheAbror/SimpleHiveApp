@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_hive/presentation/widgets/textfield_decoration.dart';
 
 void main() {
   runApp(const MainApp());
@@ -13,7 +14,7 @@ class MainApp extends StatelessWidget {
       home: Scaffold(
         appBar: AppBar(
           backgroundColor: const Color.fromARGB(255, 0, 45, 111),
-          title: const Text('FLutter Hive'),
+          title: const Text('Flutter Hive'),
         ),
         backgroundColor: const Color.fromARGB(255, 0, 45, 111),
         body: Column(
@@ -63,32 +64,6 @@ class MainApp extends StatelessWidget {
           ],
         ),
       ),
-    );
-  }
-
-  InputDecoration textfielDecoration(String hintStyle) {
-    return InputDecoration(
-      filled: true,
-      border: InputBorder.none, // Remove border color
-      enabledBorder: OutlineInputBorder(
-        borderSide: BorderSide(color: Colors.green.shade900, width: 1),
-        borderRadius: BorderRadius.circular(12),
-      ),
-      focusedBorder: OutlineInputBorder(
-        borderSide: BorderSide(color: Colors.green.shade900, width: 1),
-        borderRadius: BorderRadius.circular(12),
-      ),
-      errorBorder: OutlineInputBorder(
-        borderSide: BorderSide(color: Colors.green.shade900, width: 1),
-        borderRadius: BorderRadius.circular(12),
-      ),
-      focusedErrorBorder: OutlineInputBorder(
-        borderSide: BorderSide(color: Colors.green.shade900, width: 1),
-        borderRadius: BorderRadius.circular(12),
-      ),
-      hintText: hintStyle,
-      fillColor: Colors.grey.shade100,
-      hintStyle: const TextStyle(color: Colors.black),
     );
   }
 }
