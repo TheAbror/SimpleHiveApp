@@ -75,30 +75,32 @@ class _HomePageState extends State<HomePage> {
                   color: Colors.white,
                   borderRadius: BorderRadius.circular(12),
                 ),
-                child: Column(
-                  children: [
-                    ListView.builder(
-                      shrinkWrap: true,
-                      itemCount: boxPersons.length,
-                      itemBuilder: (context, index) {
-                        Person person = boxPersons.getAt(index);
+                child: SingleChildScrollView(
+                  child: Column(
+                    children: [
+                      ListView.builder(
+                        shrinkWrap: true,
+                        itemCount: boxPersons.length,
+                        itemBuilder: (context, index) {
+                          Person person = boxPersons.getAt(index);
 
-                        return ListTile(
-                          title: Text(person.name),
-                          subtitle: const Text('Name'),
-                          trailing: Text('Age: ${person.age}'),
-                          leading: IconButton(
-                            onPressed: () {
-                              setState(() {
-                                boxPersons.deleteAt(index);
-                              });
-                            },
-                            icon: const Icon(Icons.remove),
-                          ),
-                        );
-                      },
-                    ),
-                  ],
+                          return ListTile(
+                            title: Text(person.name),
+                            subtitle: const Text('Name'),
+                            trailing: Text('Age: ${person.age}'),
+                            leading: IconButton(
+                              onPressed: () {
+                                setState(() {
+                                  boxPersons.deleteAt(index);
+                                });
+                              },
+                              icon: const Icon(Icons.remove),
+                            ),
+                          );
+                        },
+                      ),
+                    ],
+                  ),
                 ),
               ),
             ),
